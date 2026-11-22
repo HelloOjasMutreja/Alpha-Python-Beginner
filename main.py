@@ -1,5 +1,11 @@
-import sys
+import argparse
 
-name = sys.argv[1]
+parser = argparse.ArgumentParser(
+    description='This program prints the name of my dogs'
+)
 
-print("Hello " + name)
+parser.add_argument('-c', '--color', metavar='color', required=True, choices={'Red', 'Yellow'}, help='the color to search for')
+
+args = parser.parse_args()
+
+print(args.color)
