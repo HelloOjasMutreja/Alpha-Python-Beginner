@@ -1,5 +1,5 @@
-lambda num : num * 2
+numbers = [1, 2, 3]
 
-multiply = lambda a, b : a * b
+result = filter(lambda n : n % 2 != 0, numbers)
 
-print(multiply(2, 5))
+print(list(result))
