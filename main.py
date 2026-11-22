@@ -1,3 +1,5 @@
-from lib.dog import bark
+import sys
 
-bark()
+name = sys.argv[1]
+
+print("Hello " + name)
