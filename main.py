@@ -1,5 +1,13 @@
-numbers = [1, 2, 3]
+def logtime(func):
+    def wrapper():
+        print("Before")
+        val = func()
+        print("After")
+        return val
+    return wrapper
 
-result = filter(lambda n : n % 2 != 0, numbers)
+@logtime
+def hello():
+    print("Hello!")
 
-print(list(result))
+hello()
